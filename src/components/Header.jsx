@@ -4,10 +4,16 @@ import Menu from './Menu'
 const Header = () => {
   return (
     <header>
-      <div className='logo'>
-        <img src="" alt="" />
+      <div className='nav-top-bar'>
+        <Menu />
+        <div className='logo'>
+          {/* <img src="" alt="" /> */}
+          <h3>LOGO HERE</h3>
+        </div>
       </div>
-      <Menu />
+
+
+
       <nav className="nav">
 
       </nav>
