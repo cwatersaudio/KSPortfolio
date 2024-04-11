@@ -29,10 +29,10 @@
   transition: all 0.3s;
 
   &.full-menu {
-    border-radius: 0;
+    border-radius: 0 50px 50px 0;
     padding: 0 !important;
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
     left: 0;
     top: 0;
@@ -67,7 +67,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 0%;
   opacity: 0;
   visibility: hidden;
