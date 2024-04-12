@@ -13,18 +13,19 @@ const Menu = () => {
                 <a href="#" className="menu" onClick={toggleOpen}>
                     <i className={open ? "fa fa-times" : "fa fa-bars"} aria-hidden="true" />
                 </a>
+                {open && (
+                    <div className="open overlay" id="overlay">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>)}
             </div>
-            {open && (
-                <div className="open overlay" id="overlay">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>)}
+
         </div>
 
 
