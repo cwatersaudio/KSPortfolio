@@ -9,7 +9,10 @@ function App() {
 
   return (
     <>
-      <Header />
+      <div className='page-canvas'>
+        <Header />
+      </div>
+
     </>
   )
 }

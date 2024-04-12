@@ -3,8 +3,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+.page-canvas {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: grey;
+  overflow: hidden;
+}
 
 /* Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+}
 
 .nav-top-bar {
   display: flex;
@@ -23,22 +40,16 @@
 /* Hamburger Menu Styles */
 
 
-
-/* body,
-.container {
-  background: #151515;
-  margin: 0;
-  height: 100%;
-  overflow: hidden;
-} */
-
-
-
 .container {
   position: relative;
   width: 50%;
-  height: 100vh;
   border: #ffc901 5px solid;
+
+  &.extended {
+    height: 100vh;
+    position: absolute;
+
+  }
 }
 
 .menu-container {
@@ -46,10 +57,10 @@
   border-radius: 100%;
   color: #fff;
   position: absolute;
-  width: 300px;
-  height: 300px;
-  left: -120px;
-  top: -120px;
+  width: 100px;
+  height: 100px;
+  left: -40px;
+  top: -40px;
   transition: all 0.3s;
 
   &.full-menu {
@@ -69,10 +80,10 @@
 
   .menu {
     color: #151515;
-    font-size: 3.5em;
+    font-size: 1.5em;
     position: absolute;
-    top: 160px;
-    left: 160px;
+    top: 40px;
+    left: 50px;
     z-index: 100;
     transition: all 0.3s;
     cursor: pointer;
