@@ -1,7 +1,28 @@
-/* Hamburger Menu Styles */
-
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 @import url("https://fonts.googleapis.com/css?family=Titan+One");
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+/* Header Styles */
+
+.nav-top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+
+  p {
+    font-family: 'source-code-pro', monospace;
+    font-weight: 200;
+    font-size: 2rem;
+  }
+}
+
+/* Hamburger Menu Styles */
+
+
 
 /* body,
 .container {

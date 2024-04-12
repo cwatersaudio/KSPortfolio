@@ -22,7 +22,9 @@ const Menu = () => {
     return (
         <div className="container">
             <div className={open ? "menu-container full-menu" : "menu-container"} id="toggle">
-                <a href="#" className="menu" onClick={toggleOpen}><i className={open ? "fa fa-times" : "fa fa-bars"} aria-hidden="true" /></a>
+                <a href="#" className="menu" onClick={toggleOpen}>
+                    <i className={open ? "fa fa-times" : "fa fa-bars"} aria-hidden="true" />
+                </a>
             </div>
             {open && (
                 <div className="open overlay" id="overlay">
