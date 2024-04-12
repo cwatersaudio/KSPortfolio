@@ -43,7 +43,7 @@ header {
 .container {
   position: relative;
   width: 50%;
-  border: #ffc901 5px solid;
+  border: #01ffc8 5px solid;
 
   &.extended {
     height: 100vh;
@@ -73,8 +73,8 @@ header {
     top: 0;
 
     .menu {
-      top: 40px;
-      left: 40px;
+      top: 0px;
+      left: 10px;
     }
   }
 
