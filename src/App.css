@@ -32,7 +32,7 @@
 
 @media (min-width: 800px) {
   :root {
-    --fs-h1: 4.5;
+    --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
@@ -93,6 +93,7 @@ header {
 }
 
 .nav-top-bar {
+  position: relative;
   height: 100px;
   width: 320px;
   /* display: flex; */
@@ -100,12 +101,13 @@ header {
 }
 
 .logo {
-  justify-self: flex-end;
+
 
   p {
     font-family: var(--ff-secondary);
     font-weight: var(--fw-reg);
     font-size: 1.25rem;
+    text-align: right;
   }
 }
 
@@ -115,7 +117,7 @@ header {
 
 
 .container {
-  position: relative;
+  position: absolute;
   width: 50%;
   /* border: #01ffc8 5px solid; */
 
@@ -128,7 +130,7 @@ header {
 }
 
 .menu-container {
-  background-color: #ffc801;
+  background-color: #ffc801ab;
   border-radius: 100%;
   color: #fff;
   position: absolute;

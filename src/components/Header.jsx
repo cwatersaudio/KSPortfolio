@@ -2,6 +2,8 @@ import React from 'react'
 import Menu from './Menu'
 
 const Header = () => {
+
+  // add color theme functionality
   return (
     <header>
       <div className='nav-top-bar'>
@@ -11,13 +13,6 @@ const Header = () => {
           <p>&lt;Chris Waters&gt;</p>
         </div>
       </div>
-
-
-
-
-      <nav className="nav">
-
-      </nav>
     </header>
   )
 }

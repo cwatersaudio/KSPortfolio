@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Overview = () => {
+const Skills = () => {
     return (
         <div className='overview-container'>
             <h1 id='overviewTitle'>What I Do</h1>
@@ -19,4 +19,4 @@ const Overview = () => {
     )
 }
 
-export default Overview
+export default Skills
