@@ -2,7 +2,7 @@ import React from 'react'
 
 const Skills = () => {
     return (
-        <div className='overview-container'>
+        <section className='skills-container'>
             <h1 id='overviewTitle'>What I Do</h1>
             <hr />
             <div >
@@ -15,7 +15,7 @@ const Skills = () => {
             </div>
             <button type='button'>See my work</button>
 
-        </div>
+        </section>
     )
 }
 

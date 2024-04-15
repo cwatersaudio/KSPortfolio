@@ -15,9 +15,11 @@ function App() {
     <>
       <div className='page-canvas'>
         <Header />
-        <Intro />
-        <Bio />
-        <Skills />
+        <div className='scroll-container'>
+          <Intro />
+          <Bio />
+          <Skills />
+        </div>
 
 
 

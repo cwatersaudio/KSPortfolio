@@ -5,9 +5,9 @@ const Work = () => {
     // function to map out card objects to display
 
     return (
-        <div id='work'>
+        <section id='work'>
             {/* carousel here w/snapshots */}
-        </div>
+        </section>
     )
 }
 

@@ -30,24 +30,26 @@
   --fs-body: 1rem;
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
-}
+} */
 
 .page-canvas {
   width: 320px;
   display: flex;
   flex-direction: column;
+  gap: 0;
   margin: 0 auto;
   background: grey;
   overflow: hidden;
   padding: 0;
   border: greenyellow dotted 1px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +58,11 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
-  line-height: 1.6;
+  line-height: 1.2;
+}
+
+.scroll-container {
+  scroll-behavior: smooth;
 }
 
 img {
@@ -70,6 +76,8 @@ h2 {
   padding: 0;
   margin: 0;
   font-family: var(--ff-primary);
+  font-weight: var(--fw-reg);
+  line-height: 1.2;
 }
 
 h1 {
@@ -80,10 +88,27 @@ h2 {
   font-size: var(--fs-h2);
 }
 
+strong {
+  font-weight: var(--fw-bold);
+}
+
+section {
+  padding: 1em 2em;
+}
+
+.accent-text {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-h3);
+  margin: 0;
+  padding: 0
+}
+
 /* Header Styles */
 header {
   display: flex;
   flex-direction: column;
+  margin: 0;
 
   img {
     padding: 0 40px;
@@ -100,15 +125,11 @@ header {
   /* justify-content: space-between; */
 }
 
-.logo {
-
-
-  p {
-    font-family: var(--ff-secondary);
-    font-weight: var(--fw-reg);
-    font-size: 1.25rem;
-    text-align: right;
-  }
+#chrisTag {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-reg);
+  font-size: 1.25rem;
+  text-align: right;
 }
 
 
@@ -251,6 +272,7 @@ header {
     overflow: hidden;
     transform: scale(1);
     transition: all 0.3s;
+    scroll-behavior: smooth;
   }
 
   a:is(:hover, :focus, :active) {
@@ -270,7 +292,7 @@ header {
   }
 }
 
-/* Overview Styles */
+/* Skills Styles */
 
 
 /* Bio Styles */
