@@ -4,6 +4,41 @@
 
 @import url('./theme.css');
 
+
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Source Sans Pro', sans-serif;
+  --ff-secondary: 'Source Code Pro', monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
 .page-canvas {
   width: 320px;
   display: flex;
@@ -15,10 +50,34 @@
   border: greenyellow dotted 1px;
 }
 
-h1 {
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2 {
   text-align: center;
   padding: 0;
   margin: 0;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
 }
 
 /* Header Styles */
@@ -26,16 +85,11 @@ header {
   display: flex;
   flex-direction: column;
 
-  h1,
-  h2 {
-    text-align: center;
+  img {
+    padding: 0 40px;
+    max-height: 300px;
   }
 
-}
-
-#headshot {
-  padding: 0 40px;
-  max-height: 300px;
 }
 
 .nav-top-bar {
@@ -49,9 +103,9 @@ header {
   justify-self: flex-end;
 
   p {
-    font-family: 'source-code-pro', monospace;
-    font-weight: 200;
-    font-size: 1rem;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-reg);
+    font-size: 1.25rem;
   }
 }
 
@@ -159,7 +213,7 @@ header {
   }
 
   nav {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-family: "Titan One", san-serif;
     position: relative;
     height: 50%;
