@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Skills = () => {
+const Services = () => {
     return (
-        <section className='skills-container'>
-            <h1 id='overviewTitle'>What I Do</h1>
+        <section className='my-services' id='services'>
+
+            <h2 className="section__title section__title--services">What I do</h2>
             <hr />
-            <div >
+            <div class='service'>
                 <h2>Thing 1</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic odio doloribus ducimus officiis deleniti quidem dolores doloremque nisi atque similique labore dolor odit id soluta alias veritatis, facere laudantium.</p>
                 <h2>Thing 2</h2>
@@ -13,10 +14,13 @@ const Skills = () => {
                 <h2>Thing 3</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic odio doloribus ducimus officiis deleniti quidem dolores doloremque nisi atque similique labore dolor odit id soluta alias veritatis, facere laudantium.</p>
             </div>
-            <button type='button'>See my work</button>
+            <button type='button' class='btn'>See my work</button>
+
 
         </section>
     )
 }
 
-export default Skills
+export default Services
+
+

@@ -2,27 +2,28 @@ import React from 'react'
 
 import './App.css'
 import Header from './components/Header'
-import Skills from './components/Skills'
 import Bio from './components/Bio'
 import Intro from './components/Intro'
-import Menu from './components/Menu'
+import Services from './components/Services'
 
 function App() {
 
-
+  // const colorTheme = {
+  //   primary: '#000000',
+  //   secondary: '#ffffff',
+  //   accent: '#000000',
+  //   text: '#000000',
+  //   background: '#ffffff',
+  //   font: '#000000'
+  // }
 
   return (
     <>
       <div className='page-canvas'>
         <Header />
-        <div className='scroll-container'>
-          <Intro />
-          <Bio />
-          <Skills />
-        </div>
-
-
-
+        <Intro />
+        <Bio />
+        <Services />
       </div>
 
     </>

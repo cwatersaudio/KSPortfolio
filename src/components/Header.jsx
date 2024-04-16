@@ -5,7 +5,13 @@ const Header = () => {
 
   // add color theme functionality
   return (
-    <header>
+    <header className='header'>
+      <div className="header__nav-title  "></div>
+
+
+
+
+
       <div className='nav-top-bar'>
         <Menu />
         <div className='logo'>
