@@ -32,16 +32,16 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
-/* @media (min-width: 800px) {
+@media (min-width: 800px) {
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
-} */
+}
 
-.page-canvas {
+/* .page-canvas {
   width: auto;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@
   padding: 0;
   border: greenyellow dotted 1px;
   scroll-behavior: smooth;
-}
+} */
 
 body {
   background: var(--clr-light);
@@ -118,7 +118,9 @@ h3 {
 }
 
 .section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--about,
+.section__subtitle--services,
+.section__subtitle--contact {
   background: var(--clr-accent);
   padding: .25em 1em;
   font-family: var(--ff-secondary);
@@ -209,7 +211,7 @@ header {
 .container {
   position: absolute;
   width: 50%;
-  /* border: #01ffc8 5px solid; */
+  border: #01ffc8 5px solid;
 
   &.extended {
     height: 250px;

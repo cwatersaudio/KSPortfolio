@@ -19,12 +19,12 @@ function App() {
 
   return (
     <>
-      <div className='page-canvas'>
-        <Header />
-        <Intro />
-        <Bio />
-        <Services />
-      </div>
+
+      {/* <Header /> */}
+      <Intro />
+      <Bio />
+      <Services />
+
 
     </>
   )
