@@ -10,17 +10,17 @@ const Menu = () => {
     return (
         <nav className={`container ${open ? "extended" : ""}`}>
             <div className={open ? "menu-container full-menu" : "menu-container"} id="toggle">
-                <a href="#" className="menu" onClick={toggleOpen}>
+                <button type='button' className="nav-toggle" onClick={toggleOpen}>
                     <i className={open ? "fa fa-times" : "fa fa-bars"} aria-hidden="true" />
-                </a>
+                </button>
                 {open && (
                     <div className="open overlay" id="overlay">
-                        <nav>
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#work">Work</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                        <nav className='nav'>
+                            <ul className='nav__list'>
+                                <li className='nav__item'><a href="#home" className='nav__link'>Home</a></li>
+                                <li className='nav__item'><a href="#about" className='nav__link'>About</a></li>
+                                <li className='nav__item'><a href="#work" className='nav__link'>Work</a></li>
+                                <li className='nav__item'><a href="#contact" className='nav__link'>Contact</a></li>
                             </ul>
                         </nav>
                     </div>)}
@@ -31,3 +31,4 @@ const Menu = () => {
 }
 
 export default Menu
+

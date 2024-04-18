@@ -5,14 +5,25 @@ const Services = () => {
         <section className='my-services' id='services'>
 
             <h2 className="section__title section__title--services">What I do</h2>
-            <hr />
-            <div class='service'>
-                <h2>Thing 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic odio doloribus ducimus officiis deleniti quidem dolores doloremque nisi atque similique labore dolor odit id soluta alias veritatis, facere laudantium.</p>
-                <h2>Thing 2</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic odio doloribus ducimus officiis deleniti quidem dolores doloremque nisi atque similique labore dolor odit id soluta alias veritatis, facere laudantium.</p>
-                <h2>Thing 3</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic odio doloribus ducimus officiis deleniti quidem dolores doloremque nisi atque similique labore dolor odit id soluta alias veritatis, facere laudantium.</p>
+            <div className="services">
+                <div class="service">
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="service">
+                    <h3>Frontend Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="service">
+                    <h3>Editing</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.</p>
+                </div>
             </div>
             <button type='button' class='btn'>See my work</button>
 

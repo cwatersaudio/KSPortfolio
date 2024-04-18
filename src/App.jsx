@@ -20,10 +20,11 @@ function App() {
   return (
     <>
 
-      {/* <Header /> */}
+      <Header />
       <Intro />
-      <Bio />
       <Services />
+      {/* <Bio /> */}
+
 
 
     </>
