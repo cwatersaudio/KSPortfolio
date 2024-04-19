@@ -10,7 +10,7 @@ const Header = () => {
         <p id='chrisTag' className='logo__icon'>&lt;Chris Waters\&gt;</p>
 
       </div>
-      <Menu />
+
 
 
 

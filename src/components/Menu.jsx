@@ -9,7 +9,7 @@ const Menu = () => {
     }
     return (
         <nav className={`container ${open ? "extended" : ""}`}>
-            <div className={open ? "menu-container full-menu" : "menu-container"} id="toggle">
+            <div className={open ? "menu-bknd full-menu" : "menu-bknd"} id="toggle">
                 <button type='button' className="nav-toggle" onClick={toggleOpen}>
                     <i className={open ? "fa fa-times" : "fa fa-bars"} aria-hidden="true" />
                 </button>

@@ -271,63 +271,63 @@ header {
 
 
 .container {
-  position: absolute;
-  width: 50%;
+  position: relative;
+  width: min-content;
   border: #01ffc8 5px solid;
 
   &.extended {
-    height: 250px;
-    width: 50%;
+    height: 100vh;
+    width: 100%;
     /* position: absolute; */
-
   }
+
+
 }
 
-.menu-container {
+.menu-bknd {
   background-color: #ffc801ab;
   border-radius: 100%;
   color: #fff;
   position: absolute;
-  width: 100px;
-  height: 100px;
-  left: -40px;
-  top: -40px;
-  transition: all 0.3s;
+  width: 10%;
+  height: 10%;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease-in-out;
   z-index: 2;
 
   &.full-menu {
     background-color: #ffc801ab;
-
     border-radius: 0 50px 50px 0;
-    padding: 0 !important;
-    position: absolute;
+    padding: 0;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
 
     .nav-toggle {
-      top: 0px;
-      left: 10px;
+      top: 5px;
+      left: 5px;
     }
   }
 
   .nav-toggle {
     color: #151515;
     font-size: 1.5em;
-    position: absolute;
-    top: 40px;
-    left: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
     z-index: 100;
-    transition: all 0.3s;
+    /* transition: all 0.3s ease-in-out; */
     cursor: pointer;
     z-index: 3;
 
 
-    i {
+    /* i {
       transform: scale(1);
       transition: all 0.3s;
-    }
+    } */
 
     i:hover {
       transform: scale(1.2);
@@ -369,7 +369,7 @@ header {
   }
 
   nav {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-family: "Titan One", san-serif;
     position: relative;
     height: 50%;
@@ -429,3 +429,46 @@ header {
 
 
 /* Bio Styles */
+
+/* Work Styles */
+
+/* My Work */
+
+.my-work {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  text-align: center;
+}
+
+.portfolio {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item {
+  background: var(--color-accent);
+  overflow: hidden;
+
+}
+
+.portfolio__img {
+  transition:
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+  object-fit: cover;
+  height: 100%;
+}
+
+.portfolio__item:focus {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  transform: scale(1.2);
+  opacity: .5;
+}
