@@ -442,17 +442,17 @@ header {
 
 .portfolio {
   margin: 0 auto;
-  max-width: 1000px;
-  display: grid;
+  height: 500px;
+  /* display: grid;
   grid-gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
-.portfolio__item {
+/* .portfolio__item {
   background: var(--color-accent);
   overflow: hidden;
 
-}
+} */
 
 .portfolio__img {
   transition:
@@ -471,4 +471,19 @@ header {
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.2);
   opacity: .5;
+}
+
+/* Carousel Styles */
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 50;
 }

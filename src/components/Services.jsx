@@ -6,7 +6,7 @@ const Services = () => {
 
             <h2 className="section__title section__title--services">What I do</h2>
             <div className="services">
-                <div class="service">
+                <div className="service">
                     <h3>Web Design</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
