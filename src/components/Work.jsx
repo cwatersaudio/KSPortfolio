@@ -14,9 +14,9 @@ const Work = () => {
 
 
     return (
-        <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">My projects</h2>
-            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+        <section className="my-work" id="work">
+            <h2 className="section__title section__title--work">My projects</h2>
+            <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
 
             <div class="portfolio">
 
