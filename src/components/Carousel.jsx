@@ -17,12 +17,17 @@ export function Carousel({ addDefaultImg }) {
                         <p className='portfolio__subtitle'>Movie Watchlist Project</p>
                     </a>
                 </div>
-                <div className="embla__slide">
+                <div className="embla__slide" >
                     <a href="portfolio-item.html" className="portfolio__item">
                         {/* <img src="img/oldagram-square.png" alt="" className="portfolio__img" onError={addDefaultImg} /> */}
-                        <video width="320px" height="240px" autoPlay>
-                            <source src="/media/tenzies1.mp4" type="video/mp4" />
-                        </video>
+                        <video
+                            autoPlay
+                            loop
+                            src='/media/tenzies.mp4'
+                            onMouseOver={(event) => { event.target.play() }}
+                            onMouseOut={(event) => { event.target.pause() }}
+                            className='portfolio__img'
+                        />
                         <p className='portfolio__subtitle'>Tenzies</p>
                     </a>
                 </div>
