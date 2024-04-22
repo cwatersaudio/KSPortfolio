@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from './Carousel'
 
-const Work = () => {
+const Work = (props) => {
 
     // function to map out card objects to display
 
@@ -22,6 +22,7 @@ const Work = () => {
 
                 <Carousel
                     addDefaultImg={addDefaultImg}
+                    togglePortfolioItem={props.togglePortfolioItem}
                 />
 
             </div>

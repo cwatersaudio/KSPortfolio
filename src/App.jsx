@@ -7,8 +7,15 @@ import Intro from './components/Intro'
 import Services from './components/Services'
 import Menu from './components/Menu'
 import Work from './components/Work'
+import PortfolioItem from './components/PortfolioItem'
 
 function App() {
+
+  const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
+  function togglePortfolioItemVisible() {
+    setPortfolioItemVisible(prevState => !prevState)
+  }
+
 
   // React.useEffect(() => {
   //   const themeVars = getComputedStyle(document.querySelector(':root'))
@@ -32,8 +39,13 @@ function App() {
       <Header />
       <Intro />
       <Services />
-      <Work />
-      {/* <Bio /> */}
+      <Work
+        portfolioItemVisible={togglePortfolioItemVisible}
+      />
+      <PortfolioItem
+        portfolioItemVisible={portfolioItemVisible}
+      />
+
 
 
 

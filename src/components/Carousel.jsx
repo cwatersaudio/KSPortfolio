@@ -5,7 +5,7 @@ import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 
 
-export function Carousel({ addDefaultImg }) {
+export function Carousel({ addDefaultImg, togglePortfolioItem }) {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(), WheelGesturesPlugin()])
 
     return (
@@ -18,8 +18,7 @@ export function Carousel({ addDefaultImg }) {
                     </a>
                 </div>
                 <div className="embla__slide" >
-                    <a href="portfolio-item.html" className="portfolio__item">
-                        {/* <img src="img/oldagram-square.png" alt="" className="portfolio__img" onError={addDefaultImg} /> */}
+                    <div href="" className="portfolio__item" onClick={togglePortfolioItem}>
                         <video
                             autoPlay
                             loop
@@ -29,7 +28,7 @@ export function Carousel({ addDefaultImg }) {
                             className='portfolio__img'
                         />
                         <p className='portfolio__subtitle'>Tenzies</p>
-                    </a>
+                    </div>
                 </div>
                 <div className="embla__slide">
                     <a href="portfolio-item.html" className="portfolio__item">
