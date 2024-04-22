@@ -5,7 +5,7 @@ import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 
 
-export function Carousel({ addDefaultImg, togglePortfolioItem }) {
+export function Carousel({ addDefaultImg, togglePortfolioItemVisible }) {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(), WheelGesturesPlugin()])
 
     return (
@@ -18,16 +18,17 @@ export function Carousel({ addDefaultImg, togglePortfolioItem }) {
                     </a>
                 </div>
                 <div className="embla__slide" >
-                    <div href="" className="portfolio__item" onClick={togglePortfolioItem}>
+                    <div className="portfolio__item" >
                         <video
-                            autoPlay
                             loop
-                            src='/media/tenzies.mp4'
+                            src='/media/tenzies3.mp4'
                             onMouseOver={(event) => { event.target.play() }}
                             onMouseOut={(event) => { event.target.pause() }}
-                            className='portfolio__img'
+                            className='portfolio__vid'
+                            onError={addDefaultImg}
+                            onClick={togglePortfolioItemVisible}
                         />
-                        <p className='portfolio__subtitle'>Tenzies</p>
+                        <p className='portfolio__subtitle' onClick={togglePortfolioItemVisible}>Tenzies</p>
                     </div>
                 </div>
                 <div className="embla__slide">

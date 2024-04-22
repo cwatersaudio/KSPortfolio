@@ -472,6 +472,7 @@ header {
 
 .portfolio__img {
   margin: 0 auto;
+  opacity: .7;
   transition:
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
@@ -479,15 +480,27 @@ header {
   height: 80%;
 }
 
+.portfolio__vid {
+  margin: 0 auto;
+  opacity: .7;
+  transition:
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+  object-fit: cover;
+  height: 30rem;
+  cursor: pointer;
+}
+
 .portfolio__item:focus {
   position: relative;
   z-index: 2;
 }
 
+.portfolio__vid:hover,
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.1);
-  /* opacity: .5; */
+  opacity: 1;
 }
 
 /* Carousel Styles */

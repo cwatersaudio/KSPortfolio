@@ -12,7 +12,9 @@ import PortfolioItem from './components/PortfolioItem'
 function App() {
 
   const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
+
   function togglePortfolioItemVisible() {
+    console.log('toggled')
     setPortfolioItemVisible(prevState => !prevState)
   }
 
@@ -40,7 +42,7 @@ function App() {
       <Intro />
       <Services />
       <Work
-        portfolioItemVisible={togglePortfolioItemVisible}
+        togglePortfolioItemVisible={togglePortfolioItemVisible}
       />
       <PortfolioItem
         portfolioItemVisible={portfolioItemVisible}

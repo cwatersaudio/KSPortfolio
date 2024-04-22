@@ -22,7 +22,7 @@ const Work = (props) => {
 
                 <Carousel
                     addDefaultImg={addDefaultImg}
-                    togglePortfolioItem={props.togglePortfolioItem}
+                    togglePortfolioItemVisible={props.togglePortfolioItemVisible}
                 />
 
             </div>
