@@ -9,6 +9,7 @@ import Menu from './components/Menu'
 import Work from './components/Work'
 import PortfolioItem from './components/PortfolioItem'
 
+
 function App() {
 
   const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
@@ -43,10 +44,9 @@ function App() {
       <Services />
       <Work
         togglePortfolioItemVisible={togglePortfolioItemVisible}
-      />
-      <PortfolioItem
         portfolioItemVisible={portfolioItemVisible}
       />
+
 
 
 

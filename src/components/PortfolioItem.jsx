@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 const PortfolioItem = ({ portfolioItemVisible }) => {
 
     //receives a portfilio object conatining:
@@ -10,9 +12,9 @@ const PortfolioItem = ({ portfolioItemVisible }) => {
     //* live site link
     return (
         <>
-            {portfolioItemVisible && (
-                <h1>Here's a portfolio item</h1>
-            )}
+            <div className='portfolio__modal'>
+                <h2>here's the modal</h2>
+            </div>
         </>
     )
 }

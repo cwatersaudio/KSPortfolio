@@ -517,3 +517,13 @@ header {
   flex: 0 0 100%;
   min-width: 50;
 }
+
+/* Portfolio Item Styles */
+
+.portfolio__modal {
+  height: 80vh;
+  width: 60%;
+  background-color: var(--clr-dark);
+  position: absolute;
+  color: aliceblue;
+}

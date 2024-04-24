@@ -2,10 +2,13 @@ import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import WorkPreview from './WorkPreview'
+import { createPortal } from 'react-dom'
+import PortfolioItem from './PortfolioItem'
 
 
 
-export function Carousel({ addDefaultImg, togglePortfolioItemVisible }) {
+export function Carousel({ addDefaultImg, togglePortfolioItemVisible, portfolioItemVisible }) {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(), WheelGesturesPlugin()])
 
     return (
@@ -19,14 +22,9 @@ export function Carousel({ addDefaultImg, togglePortfolioItemVisible }) {
                 </div>
                 <div className="embla__slide" >
                     <div className="portfolio__item" >
-                        <video
-                            loop
-                            src='/media/tenzies3.mp4'
-                            onMouseOver={(event) => { event.target.play() }}
-                            onMouseOut={(event) => { event.target.pause() }}
-                            className='portfolio__vid'
-                            onError={addDefaultImg}
+                        <WorkPreview
                             onClick={togglePortfolioItemVisible}
+                            vidSrc="/media/tenzies3.mp4"
                         />
                         <p className='portfolio__subtitle' onClick={togglePortfolioItemVisible}>Tenzies</p>
                     </div>
@@ -45,6 +43,11 @@ export function Carousel({ addDefaultImg, togglePortfolioItemVisible }) {
                 </div>
 
             </div>
+            {portfolioItemVisible && createPortal(
+                <PortfolioItem onClick={togglePortfolioItemVisible} />,
+                document.body
+            )}
         </div>
+
     )
 }
