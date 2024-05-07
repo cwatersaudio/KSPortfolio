@@ -526,4 +526,5 @@ header {
   background-color: var(--clr-dark);
   position: absolute;
   color: aliceblue;
+  margin: 0 auto;
 }

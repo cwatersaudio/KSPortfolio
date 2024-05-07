@@ -1,14 +1,19 @@
 import React from 'react'
+
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import WorkPreview from './WorkPreview'
-import { createPortal } from 'react-dom'
+
 import PortfolioItem from './PortfolioItem'
+import WorkPreview from './WorkPreview'
+import { PortfolioContext } from '../App'
+
+import { createPortal } from 'react-dom'
 
 
 
-export function Carousel({ addDefaultImg, togglePortfolioItemVisible, portfolioItemVisible }) {
+export function Carousel({ addDefaultImg }) {
+    const { togglePortfolioItemVisible, portfolioItemVisible } = React.useContext(PortfolioContext)
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(), WheelGesturesPlugin()])
 
     return (

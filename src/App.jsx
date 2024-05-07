@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './App.css'
 import Header from './components/Header'
 import Bio from './components/Bio'
@@ -7,8 +6,8 @@ import Intro from './components/Intro'
 import Services from './components/Services'
 import Menu from './components/Menu'
 import Work from './components/Work'
-import PortfolioItem from './components/PortfolioItem'
 
+const PortfolioContext = React.createContext()
 
 function App() {
 
@@ -42,10 +41,12 @@ function App() {
       <Header />
       <Intro />
       <Services />
-      <Work
-        togglePortfolioItemVisible={togglePortfolioItemVisible}
-        portfolioItemVisible={portfolioItemVisible}
-      />
+      <PortfolioContext.Provider value={{ portfolioItemVisible, togglePortfolioItemVisible }}>
+        <Work
+        // togglePortfolioItemVisible={togglePortfolioItemVisible}
+        // portfolioItemVisible={portfolioItemVisible}
+        />
+      </PortfolioContext.Provider>
 
 
 
@@ -56,3 +57,4 @@ function App() {
 }
 
 export default App
+export { PortfolioContext }
