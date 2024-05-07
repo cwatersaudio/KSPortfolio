@@ -8,7 +8,6 @@ import PortfolioItem from './PortfolioItem'
 import WorkPreview from './WorkPreview'
 import { PortfolioContext } from '../App'
 
-import { createPortal } from 'react-dom'
 
 
 
@@ -48,10 +47,7 @@ export function Carousel({ addDefaultImg }) {
                 </div>
 
             </div>
-            {portfolioItemVisible && createPortal(
-                <PortfolioItem onClick={togglePortfolioItemVisible} />,
-                document.body
-            )}
+            {portfolioItemVisible && <PortfolioItem />}
         </div>
 
     )
