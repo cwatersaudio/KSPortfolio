@@ -7,16 +7,10 @@ import Services from './components/Services'
 import Menu from './components/Menu'
 import Work from './components/Work'
 
-const PortfolioContext = React.createContext()
 
 function App() {
 
-  const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
 
-  function togglePortfolioItemVisible() {
-    console.log('toggled')
-    setPortfolioItemVisible(prevState => !prevState)
-  }
 
 
   // React.useEffect(() => {
@@ -41,20 +35,9 @@ function App() {
       <Header />
       <Intro />
       <Services />
-      <PortfolioContext.Provider value={{ portfolioItemVisible, togglePortfolioItemVisible }}>
-        <Work
-        // togglePortfolioItemVisible={togglePortfolioItemVisible}
-        // portfolioItemVisible={portfolioItemVisible}
-        />
-      </PortfolioContext.Provider>
-
-
-
-
-
+      <Work />
     </div>
   )
 }
 
 export default App
-export { PortfolioContext }
