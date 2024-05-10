@@ -62,18 +62,22 @@ export function Carousel({ addDefaultImg }) {
         );
     });
     return (
-        <div className="embla" ref={emblaRef}>
-            <div className="embla__container">
+        <>
+            <div className="embla" ref={emblaRef}>
+                <div className="embla__container">
 
-                {workUI}
+                    {workUI}
+                </div>
             </div>
+
             {portfolioItemVisible && <PortfolioItem
                 isOpen={portfolioItemVisible}
                 onClose={handleModalClose}
                 selectedItem={selectedProject}
 
             />}
-        </div>
+        </>
+
 
     )
 }

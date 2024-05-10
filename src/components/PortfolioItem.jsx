@@ -15,7 +15,7 @@ const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="modal-overlay">
+        <div className="portfolio__modal">
             <div className="modal">
                 <button className="modal-close" onClick={onClose}>
                     &times;
