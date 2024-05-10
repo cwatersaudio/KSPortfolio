@@ -30,7 +30,7 @@ export function Carousel({ addDefaultImg }) {
         [Autoplay(),
         WheelGesturesPlugin()])
     const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
-    const [selectedProject, setSelectedProject] = React.useState(null)
+    const [selectedProject, setSelectedProject] = React.useState(projects[0])
 
     const handleItemClick = (item) => {
         console.log(item)
@@ -70,7 +70,7 @@ export function Carousel({ addDefaultImg }) {
             {portfolioItemVisible && <PortfolioItem
                 isOpen={portfolioItemVisible}
                 onClose={handleModalClose}
-                selectedItem={selectedItem}
+                selectedItem={selectedProject}
 
             />}
         </div>

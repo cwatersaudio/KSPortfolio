@@ -9,7 +9,7 @@ const projects = [
 	},
 	{
 		title: "Movie Watchlist",
-		description: "Description 1", //could these be linked to git readme?
+		description: "Description 3", //could these be linked to git readme?
 		image: "",
 		clip: "",
 		gitHub: "",
@@ -17,7 +17,7 @@ const projects = [
 	},
 	{
 		title: "Color Picker",
-		description: "Description 1",
+		description: "Description 2",
 		image: "",
 		clip: "",
 		gitHub: "https://github.com/cwatersaudio/color-picker-standalone.git",

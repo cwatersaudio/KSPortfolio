@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-const PortfolioItem = ({ portfolioItemVisible, isOpen, onClose, selectedItem }) => {
+const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
 
     //receives a portfilio object conatining:
     //* title
