@@ -2,7 +2,8 @@ import React from 'react'
 
 
 
-const PortfolioItem = ({ portfolioItemVisible }) => {
+
+const PortfolioItem = ({ portfolioItemVisible, isOpen, onClose, selectedItem }) => {
 
     //receives a portfilio object conatining:
     //* title
@@ -10,13 +11,23 @@ const PortfolioItem = ({ portfolioItemVisible }) => {
     //* image
     //*gitHub ilink
     //* live site link
-    return (
-        <>
-            <div className='portfolio__modal'>
-                <h2>here's the modal</h2>
-            </div>
-        </>
-    )
-}
 
-export default PortfolioItem
+    if (!isOpen) return null;
+
+    return (
+        <div className="modal-overlay">
+            <div className="modal">
+                <button className="modal-close" onClick={onClose}>
+                    &times;
+                </button>
+                <div className="modal-content">
+                    <h2>{selectedItem.title}</h2>
+                    <p>{selectedItem.description}</p>
+                    {/* Add any other relevant details about the selected item */}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default PortfolioItem;

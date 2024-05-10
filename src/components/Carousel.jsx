@@ -24,58 +24,55 @@ import projects from './WorkData'
 
 
 export function Carousel({ addDefaultImg }) {
-    const { togglePortfolioItemVisible, portfolioItemVisible } = React.useContext(PortfolioContext)
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(), WheelGesturesPlugin()])
+    // const { portfolioItemVisible, selectedProject } = React.useContext(PortfolioContext)
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        { loop: true },
+        [Autoplay(),
+        WheelGesturesPlugin()])
+    const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
+    const [selectedProject, setSelectedProject] = React.useState(null)
 
+    const handleItemClick = (item) => {
+        console.log(item)
+        setSelectedProject(item);
+        setPortfolioItemVisible(true);
+    };
+
+    const handleModalClose = () => {
+        setPortfolioItemVisible(false);
+        setSelectedItem(null);
+    };
 
     const workUI = projects.map((project, index) => {
         return (
-            <div className="embla__slide" >
-                <div className="portfolio__item" >
+            <div className="embla__slide" key={project.title}>
+                <div className="portfolio__item">
                     <WorkPreview
-                        onClick={togglePortfolioItemVisible}
+                        onClick={() => handleItemClick(project)}
                         vidSrc={project.clip}
                     />
-                    <p className='portfolio__subtitle' onClick={togglePortfolioItemVisible}>{project.title}</p>
+                    <p
+                        className="portfolio__subtitle"
+                        onClick={() => handleItemClick(project)}
+                    >
+                        {project.title}
+                    </p>
                 </div>
             </div>
-        )
-    })
+        );
+    });
     return (
         <div className="embla" ref={emblaRef}>
             <div className="embla__container">
-                {/* <div className="embla__slide">
-                    <a href="portfolio-item.html" className="portfolio__item">
-                        <img src="img/oldagram-square.png" alt="" className="portfolio__img" onError={addDefaultImg} />
-                        <p className='portfolio__subtitle'>Movie Watchlist Project</p>
-                    </a>
-                </div>
-                <div className="embla__slide" >
-                    <div className="portfolio__item" >
-                        <WorkPreview
-                            onClick={togglePortfolioItemVisible}
-                            vidSrc="/media/tenzies3.mp4"
-                        />
-                        <p className='portfolio__subtitle' onClick={togglePortfolioItemVisible}>Tenzies</p>
-                    </div>
-                </div>
-                <div className="embla__slide">
-                    <a href="portfolio-item.html" className="portfolio__item">
-                        <img src="img/oldagram-square.png" alt="" className="portfolio__img" onError={addDefaultImg} />
-                        <p className='portfolio__subtitle'>Color Picker</p>
-                    </a>
-                </div>
-                <div className="embla__slide">
-                    <a href="portfolio-item.html" className="portfolio__item">
-                        <img src="img/oldagram-square.png" alt="" className="portfolio__img" onError={addDefaultImg} />
-                        <p className='portfolio__subtitle'>Endorsements</p>
-                    </a>
-                </div> */}
-
 
                 {workUI}
             </div>
-            {portfolioItemVisible && <PortfolioItem />}
+            {portfolioItemVisible && <PortfolioItem
+                isOpen={portfolioItemVisible}
+                onClose={handleModalClose}
+                selectedItem={selectedItem}
+
+            />}
         </div>
 
     )
