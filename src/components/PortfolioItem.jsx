@@ -37,8 +37,12 @@ const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
 
                         </div>
                         <div className="portfolio__modal--footer">
-                            <FaGithub className='portfolio__modal--icon' />
-                            <SiNetlify className='portfolio__modal--icon' />
+                            <a href={selectedItem.gitHub} className="portfolio__link">
+                                <FaGithub className='portfolio__modal--icon' />
+                            </a>
+                            <a href={selectedItem.liveSite} className="portfolio__link">
+                                <SiNetlify className='portfolio__modal--icon' />
+                            </a>
                         </div>
                         {/* Add any other relevant details about the selected item */}
                     </div>
