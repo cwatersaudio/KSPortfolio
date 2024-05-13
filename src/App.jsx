@@ -34,14 +34,11 @@ function App() {
 
   return (
     <div>
-      {/* <Menu />
+      <Menu />
       <Header />
       <Intro />
-      <Services /> */}
-      {/* <Work /> */}
-      <PortfolioItem
-        selectedItem={workSamples[0]}
-      />
+      <Services />
+      <Work />
     </div>
   )
 }
