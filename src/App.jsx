@@ -6,11 +6,14 @@ import Intro from './components/Intro'
 import Services from './components/Services'
 import Menu from './components/Menu'
 import Work from './components/Work'
+import PortfolioItem from './components/PortfolioItem'
 
+
+import projects from './components/WorkData'
 
 function App() {
 
-
+  const workSamples = projects
 
 
   // React.useEffect(() => {
@@ -31,11 +34,14 @@ function App() {
 
   return (
     <div>
-      <Menu />
+      {/* <Menu />
       <Header />
       <Intro />
-      <Services />
-      <Work />
+      <Services /> */}
+      {/* <Work /> */}
+      <PortfolioItem
+        selectedItem={workSamples[0]}
+      />
     </div>
   )
 }

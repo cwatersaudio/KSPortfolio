@@ -1,4 +1,8 @@
 import React from 'react'
+import { FaGithub } from "react-icons/fa";
+import { SiNetlify } from "react-icons/si";
+
+
 
 
 
@@ -12,18 +16,32 @@ const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
     //*gitHub ilink
     //* live site link
 
-    if (!isOpen) return null;
+    // if (!isOpen) return null;
 
     return (
-        <div className="portfolio__modal">
-            <div className="modal">
-                <button className="modal-close" onClick={onClose}>
-                    &times;
-                </button>
-                <div className="modal-content">
-                    <h2>{selectedItem.title}</h2>
-                    <p>{selectedItem.description}</p>
-                    {/* Add any other relevant details about the selected item */}
+        <div className="portfolio__overlay">
+
+            <div className="portfolio__modal">
+                <div className="modal">
+                    {/* <button className="modal-close" onClick={onClose}>
+                        &times;
+                    </button> */}
+                    <div className="modal__content">
+                        <div className='portfolio__modal--top'>
+                            <h2>{selectedItem.title}</h2>
+                        </div>
+                        <div className="portfolio__modal--main">
+                            <video src={selectedItem.clip} className='portfolio__modal--clip' />
+
+                            <p>{selectedItem.description}</p>
+
+                        </div>
+                        <div className="portfolio__modal--footer">
+                            <FaGithub className='portfolio__modal--icon' />
+                            <SiNetlify className='portfolio__modal--icon' />
+                        </div>
+                        {/* Add any other relevant details about the selected item */}
+                    </div>
                 </div>
             </div>
         </div>

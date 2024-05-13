@@ -1,10 +1,11 @@
 const projects = [
 	{
 		title: "Tenzies",
-		description: "Description 1",
+		description:
+			"Tenzies is a dice game which is a combination of dice rolling and dice matching. The game is played with a single player, and the goal is to roll the ten dice repeatedly, attempting to get all the same number.  You can 'hold' as many dice each turn as you want and only roll the free dice.  The game is won when all dice match.  This was a 'solo project' from Scrimba's Frontend Developer career path.  I expanded my project to use the 'react-roll-dice' package, which allowed me to add a dice rolling animation and gave me a chance to practice using 3rd part React packages.",
 		image: "",
 		clip: "/media/tenzies3.mp4",
-		gitHub: "https://github.com/chriswaters",
+		gitHub: "https://github.com/cwatersaudio/quizzical-standalone",
 		liveSite: "https://animatedtenzies.netlify.app/",
 	},
 	{
