@@ -557,7 +557,7 @@ header {
 }
 
 .portfolio__modal--top {
-  text-align: left;
+  text-align: center;
 }
 
 .portfolio__modal--main {
@@ -582,6 +582,13 @@ header {
   margin: 0 1rem;
   height: 2rem;
   width: 2rem;
+  transition: all 2s ease-in;
+
+}
+
+.portfolio__link {
+  transition: all 2s ease-in;
+
 }
 
 /* .portfolio__modal--icon:hover~.portfolio__modal--icon-caption {
@@ -591,6 +598,8 @@ header {
 
 .portfolio__modal--icon-caption {
   display: none;
+  transition: all 2s ease-in;
+
 }
 
 .portfolio__link .portfolio__modal--icon-caption {

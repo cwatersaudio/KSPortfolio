@@ -37,11 +37,11 @@ const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
 
                         </div>
                         <div className="portfolio__modal--footer">
-                            <a href={selectedItem.gitHub} className="portfolio__link">
+                            <a href={selectedItem.gitHub} target="_blank" rel="noreferrer" className="portfolio__link">
                                 <FaGithub className='portfolio__modal--icon' />
                                 <span className='portfolio__modal--icon-caption'>GitHub Repo</span>
                             </a>
-                            <a href={selectedItem.liveSite} className="portfolio__link">
+                            <a href={selectedItem.liveSite} target="_blank" rel="noreferrer" className="portfolio__link">
                                 <SiNetlify className='portfolio__modal--icon' />
                                 <span className='portfolio__modal--icon-caption'>Live Site</span>
                             </a>
