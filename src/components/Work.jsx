@@ -8,18 +8,9 @@ const Work = (props) => {
 
     // function to map out card objects to display
 
-
-    function selectProject(item) {
-        setSelectedProject(item)
-        setPortfolioItemVisible(prevState => !prevState)
-    }
-
     const addDefaultImg = ev => {
         ev.target.src = "/img/default_image.jpg"
     }
-
-
-
 
     return (
         // <PortfolioContext.Provider value={{ portfolioItemVisible, selectedProject }}>

@@ -436,7 +436,6 @@ header {
 
 /* Work Styles */
 
-/* My Work */
 
 .my-work {
   background-color: var(--color-dark);
@@ -463,11 +462,11 @@ header {
   color: var(--clr-accent);
   font-family: var(--ff-secondary);
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .portfolio__subtitle:link {
   text-decoration: none;
-
 }
 
 .portfolio__img {
@@ -487,7 +486,7 @@ header {
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
   object-fit: cover;
-  height: 30rem;
+  height: 80%;
   cursor: pointer;
 }
 
@@ -502,6 +501,8 @@ header {
   transform: scale(1.1);
   opacity: 1;
 }
+
+
 
 /* Carousel Styles */
 

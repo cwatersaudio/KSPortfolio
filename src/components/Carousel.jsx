@@ -50,10 +50,13 @@ export function Carousel({ addDefaultImg }) {
                     <WorkPreview
                         onClick={() => handleItemClick(project)}
                         vidSrc={project.clip}
+                        imgSrc={project.image}
+                        addDefaultImg={addDefaultImg}
                     />
                     <p
                         className="portfolio__subtitle"
                         onClick={() => handleItemClick(project)}
+
                     >
                         {project.title}
                     </p>
