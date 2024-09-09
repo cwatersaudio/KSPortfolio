@@ -521,9 +521,8 @@ header {
 
 /* Portfolio Item Styles */
 
-.portfolio__overlay {
+/* .portfolio__overlay { 
   position: fixed;
-  /* Positioning and size */
   top: 0;
   left: 0;
   width: 100vw;
@@ -532,7 +531,7 @@ header {
   z-index: 4;
   overflow-y: hidden;
   padding-right: 15px;
-}
+} */
 
 .portfolio__modal {
   left: 0;

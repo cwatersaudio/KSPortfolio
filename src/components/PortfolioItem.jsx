@@ -21,7 +21,7 @@ const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
     return (
         <div className="portfolio__overlay">
 
-            <div className="portfolio__modal">
+            <dialogue className="portfolio__modal">
                 <div className="modal">
 
                     <div className="modal__content">
@@ -49,7 +49,7 @@ const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialogue>
         </div>
     );
 };
