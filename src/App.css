@@ -534,14 +534,14 @@ header {
 } */
 
 .portfolio__modal {
-  left: 0;
+  /* left: 0;
   right: 0;
   top: 10%;
-  bottom: 0;
+  bottom: 0; */
   height: fit-content;
   max-width: 75%;
   background-color: var(--clr-dark);
-  position: fixed;
+  /* position: fixed; */
   color: aliceblue;
   margin: 0 auto;
   z-index: 5;
@@ -568,6 +568,10 @@ header {
   display: flex;
   text-align: left;
   margin-bottom: 2rem;
+}
+
+.portfolio__modal--description {
+  font-size: 1rem;
 }
 
 .portfolio__modal--footer {

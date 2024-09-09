@@ -92,6 +92,7 @@ export function Carousel({ addDefaultImg }) {
                 {selectedProject && <PortfolioItem
                     selectedItem={selectedProject}
                     onClose={togglePortfolioModal}
+                    noImg={addDefaultImg}
                 />
                 }
             </dialog>

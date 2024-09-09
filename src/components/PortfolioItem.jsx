@@ -27,9 +27,9 @@ const PortfolioItem = ({ onClose, selectedItem }) => {
                     <h2>{selectedItem.title}</h2>
                 </div>
                 <div className="portfolio__modal--main">
-                    {selectedItem.clip != null && <video src={selectedItem.clip} className='portfolio__modal--clip' />}
+                    {selectedItem.clip && <video src={selectedItem.clip} className='portfolio__modal--clip' />}
 
-                    <p>{selectedItem.description}</p>
+                    <p className='portfolio__modal--description'>{selectedItem.description}</p>
 
                 </div>
                 <div className="portfolio__modal--footer">
