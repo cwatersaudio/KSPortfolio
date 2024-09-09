@@ -24,13 +24,11 @@ import projects from './WorkData'
 
 
 export function Carousel({ addDefaultImg }) {
-    // const { portfolioItemVisible, selectedProject } = React.useContext(PortfolioContext)
     const [emblaRef, emblaApi] = useEmblaCarousel(
         { loop: true },
         [Autoplay(),
         WheelGesturesPlugin()])
-    // const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
-    const [selectedProject, setSelectedProject] = React.useState(projects[0])
+    const [selectedProject, setSelectedProject] = React.useState(null);
     const portfolioItemRef = React.useRef(null);
 
     const togglePortfolioModal = () => {
@@ -51,12 +49,9 @@ export function Carousel({ addDefaultImg }) {
         togglePortfolioModal()
     };
 
-    const handleModalClose = () => {
-        setPortfolioItemVisible(false);
-        setSelectedItem(null);
-    };
 
-    const workUI = projects.map((project, index) => {
+
+    const workCarousel = projects.map((project, index) => {
         return (
             <div className="embla__slide" key={project.title}>
                 <div className="portfolio__item">
@@ -82,7 +77,7 @@ export function Carousel({ addDefaultImg }) {
             <div className="embla" ref={emblaRef}>
                 <div className="embla__container">
 
-                    {workUI}
+                    {workCarousel}
                 </div>
             </div>
 
@@ -94,11 +89,11 @@ export function Carousel({ addDefaultImg }) {
             />} */}
 
             <dialog ref={portfolioItemRef} className="portfolio__modal">
-                <PortfolioItem
+                {selectedProject && <PortfolioItem
                     selectedItem={selectedProject}
                     onClose={togglePortfolioModal}
                 />
-
+                }
             </dialog>
         </>
 

@@ -17,7 +17,7 @@ const PortfolioItem = ({ onClose, selectedItem }) => {
     return (
         // <div className="portfolio__overlay">
 
-        <dialog className="portfolio__modal">
+        <div className="portfolio__modal">
 
             <div className="modal__content">
                 <button className="modal-close" onClick={onClose}>
@@ -43,7 +43,7 @@ const PortfolioItem = ({ onClose, selectedItem }) => {
                     </a>
                 </div>
             </div>
-        </dialog>
+        </div>
     );
 };
 
