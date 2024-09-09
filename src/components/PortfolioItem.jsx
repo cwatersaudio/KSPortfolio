@@ -27,7 +27,8 @@ const PortfolioItem = ({ onClose, selectedItem }) => {
                     <h2>{selectedItem.title}</h2>
                 </div>
                 <div className="portfolio__modal--main">
-                    {selectedItem.clip && <video src={selectedItem.clip} className='portfolio__modal--clip' />}
+                    {selectedItem.clip ? <video src={selectedItem.clip} className='portfolio__modal--clip' /> :
+                        <img src={selectedItem.image ? selectedItem.image : '/img/default_image.jpg'} alt="Preview of project" />}
 
                     <p className='portfolio__modal--description'>{selectedItem.description}</p>
 
