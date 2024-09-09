@@ -32,7 +32,7 @@ export function Carousel({ addDefaultImg }) {
     const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
     const [selectedProject, setSelectedProject] = React.useState(projects[0])
 
-    const handleItemClick = (item) => {
+    const selectProject = (item) => {
         console.log(item)
         setSelectedProject(item);
         setPortfolioItemVisible(true);
@@ -48,7 +48,7 @@ export function Carousel({ addDefaultImg }) {
             <div className="embla__slide" key={project.title}>
                 <div className="portfolio__item">
                     <WorkPreview
-                        onClick={() => handleItemClick(project)}
+                        onClick={() => selectProject(project)}
                         vidSrc={project.clip}
                         imgSrc={project.image}
                         addDefaultImg={addDefaultImg}

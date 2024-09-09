@@ -23,10 +23,11 @@ const PortfolioItem = ({ isOpen, onClose, selectedItem }) => {
 
             <div className="portfolio__modal">
                 <div className="modal">
-                    <button className="modal-close" onClick={onClose}>
-                        &times;
-                    </button>
+
                     <div className="modal__content">
+                        <button className="modal-close" onClick={onClose}>
+                            &times;
+                        </button>
                         <div className='portfolio__modal--top'>
                             <h2>{selectedItem.title}</h2>
                         </div>

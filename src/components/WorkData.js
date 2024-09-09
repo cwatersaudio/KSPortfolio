@@ -30,7 +30,7 @@ const projects = [
 		image: "",
 		clip: "",
 		gitHub: "https://github.com/cwatersaudio/endorsements-standalone.git",
-		liveSite: "https://gleaming-licorice-029ec9.netlify.app/",
+		liveSite: "https://cwendorsements.netlify.app/",
 	},
 	{
 		title: "Trivia App",
