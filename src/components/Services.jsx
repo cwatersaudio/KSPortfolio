@@ -19,10 +19,8 @@ const Services = () => {
                         aliquip ex ea commodo consequat.</p>
                 </div>
                 <div className="service">
-                    <h3>Editing</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.</p>
+                    <h3>Figma to Code</h3>
+                    <p>Need your beautiful Figma prototype converted into code?  No problem.  I can help transform your prototype into a working website, complete with animations, responsive layout, and the beautiful fonts and colors you worked so hard on.</p>
                 </div>
             </div>
             <button type='button' className='btn'>See my work</button>
