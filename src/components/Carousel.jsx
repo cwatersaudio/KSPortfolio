@@ -4,7 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
-import PortfolioItem from './PortfolioItem'
+import PortfolioModal from './PortfolioModal'
 import WorkPreview from './WorkPreview'
 import { PortfolioContext } from './Work'
 import projects from './WorkData'
@@ -29,16 +29,16 @@ export function Carousel({ addDefaultImg }) {
         [Autoplay(),
         WheelGesturesPlugin()])
     const [selectedProject, setSelectedProject] = React.useState(null);
-    const portfolioItemRef = React.useRef(null);
+    const PortfolioModalRef = React.useRef(null);
 
     const togglePortfolioModal = () => {
-        if (!portfolioItemRef.current) {
+        if (!PortfolioModalRef.current) {
             console.log("modal not there")
             return
         } else {
-            portfolioItemRef.current.hasAttribute('open') ?
-                portfolioItemRef.current.close() :
-                portfolioItemRef.current.showModal()
+            PortfolioModalRef.current.hasAttribute('open') ?
+                PortfolioModalRef.current.close() :
+                PortfolioModalRef.current.showModal()
 
         }
     }
@@ -81,15 +81,15 @@ export function Carousel({ addDefaultImg }) {
                 </div>
             </div>
 
-            {/* {portfolioItemVisible && <PortfolioItem
-                isOpen={portfolioItemVisible}
+            {/* {PortfolioModalVisible && <PortfolioModal
+                isOpen={PortfolioModalVisible}
                 onClose={handleModalClose}
                 selectedItem={selectedProject}
 
             />} */}
 
-            <dialog ref={portfolioItemRef} className="portfolio__modal">
-                {selectedProject && <PortfolioItem
+            <dialog ref={PortfolioModalRef} className="portfolio__modal">
+                {selectedProject && <PortfolioModal
                     selectedItem={selectedProject}
                     onClose={togglePortfolioModal}
                     noImg={addDefaultImg}

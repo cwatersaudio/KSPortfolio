@@ -2,7 +2,7 @@ import React from 'react'
 import { FaGithub } from "react-icons/fa";
 import { SiNetlify } from "react-icons/si";
 
-const PortfolioItem = ({ onClose, selectedItem }) => {
+const PortfolioModal = ({ onClose, selectedItem }) => {
 
     //receives a portfilio object conatining:
     //* title
@@ -48,4 +48,4 @@ const PortfolioItem = ({ onClose, selectedItem }) => {
     );
 };
 
-export default PortfolioItem;
+export default PortfolioModal;

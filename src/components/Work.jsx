@@ -13,7 +13,7 @@ const Work = (props) => {
     }
 
     return (
-        // <PortfolioContext.Provider value={{ portfolioItemVisible, selectedProject }}>
+        // <PortfolioContext.Provider value={{ PortfolioModalVisible, selectedProject }}>
         <section className="my-work" id="work">
             <h2 className="section__title section__title--work">My projects</h2>
             <p className="section__subtitle section__subtitle--work">A selection of my range of work</p>
