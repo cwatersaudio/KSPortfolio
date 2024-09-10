@@ -8,7 +8,7 @@ const WorkPreview = ({ vidSrc, addDefaultImg, onClick, imgSrc }) => {
                 src={vidSrc}
                 onMouseEnter={(event) => { event.target.play() }}
                 onMouseOut={(event) => { event.target.currentTime = 0; event.target.pause() }}
-                className='portfolio__vid'
+                className='portfolio__vid portfolio__prev'
                 onError={addDefaultImg}
                 onClick={onClick}
                 muted='muted'

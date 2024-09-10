@@ -21,6 +21,7 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
+  --clr-contDark: #4b4b4b;
   --clr-accent: #16e0bd;
 
   --fs-h1: 3rem;
@@ -277,7 +278,6 @@ header {
 .container {
   position: relative;
   width: min-content;
-  /* border: #01ffc8 5px solid; */
 
   &.extended {
     height: 100vh;
@@ -445,12 +445,13 @@ header {
 
 .portfolio {
   margin: 0 auto;
-  height: 500px;
+  height: auto;
   background-color: var(--clr-dark);
-  /* display: grid;
-  grid-gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  padding-top: 5rem;
+
 }
+
+
 
 .portfolio__item {
   background: var(--color-accent);
@@ -476,7 +477,9 @@ header {
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
   object-fit: cover;
-  height: 80%;
+  height: 60%;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .portfolio__vid {
@@ -486,7 +489,7 @@ header {
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
   object-fit: cover;
-  height: 80%;
+  height: 60%;
   cursor: pointer;
 }
 
@@ -519,41 +522,26 @@ header {
   min-width: 50;
 }
 
+
+
 /* Portfolio Item Styles */
 
-/* .portfolio__overlay { 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(128, 128, 128, 0.5);
-  z-index: 4;
-  overflow-y: hidden;
-  padding-right: 15px;
-} */
+
 
 .portfolio__modal {
-  /* left: 0;
-  right: 0;
-  top: 10%;
-  bottom: 0; */
-  height: fit-content;
-  max-width: 75%;
-  background-color: var(--clr-dark);
-  /* position: fixed; */
-  color: aliceblue;
-  margin: 0 auto;
-  z-index: 5;
+  max-height: fit-content;
+  width: 75%;
+  background-color: var(--clr-contDark);
   border-radius: 15px;
-  overflow: scroll;
+  /* overflow: scroll; */
 
 }
 
 .modal__content {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  gap: .5rem;
+  /* padding: 20px; */
 }
 
 .modal-close {
@@ -567,11 +555,18 @@ header {
 .portfolio__modal--main {
   display: flex;
   text-align: left;
-  margin-bottom: 2rem;
+
+}
+
+.portfolio__modal--img {
+  border-radius: 8px;
+  max-height: 30rem;
+  margin-left: 2rem;
 }
 
 .portfolio__modal--description {
   font-size: 1rem;
+  margin-left: 2rem;
 }
 
 .portfolio__modal--footer {
@@ -591,18 +586,11 @@ header {
   height: 2rem;
   width: 2rem;
   transition: all 2s ease-in;
-
 }
 
 .portfolio__link {
   transition: all 2s ease-in;
-
 }
-
-/* .portfolio__modal--icon:hover~.portfolio__modal--icon-caption {
-  visibility: visible;
-
-} */
 
 .portfolio__modal--icon-caption {
   display: none;
