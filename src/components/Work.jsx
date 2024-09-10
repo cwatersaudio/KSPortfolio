@@ -9,7 +9,7 @@ const Work = (props) => {
     // function to map out card objects to display
 
     const addDefaultImg = ev => {
-        ev.target.src = "/img/default_image.jpg"
+        ev.target.src = "/public/img/default_image.jpg"
     }
 
     return (

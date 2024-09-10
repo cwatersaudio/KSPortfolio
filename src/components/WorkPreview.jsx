@@ -15,7 +15,7 @@ const WorkPreview = ({ vidSrc, addDefaultImg, onClick, imgSrc }) => {
             />
             :
             <img
-                src={imgSrc !== "" ? imgSrc : '/img/default_image.jpg'}
+                src={imgSrc !== "" ? imgSrc : '/public/img/default_image.jpg'}
                 className='portfolio__img'
                 onClick={onClick}
             />}
