@@ -27,7 +27,7 @@ const projects = [
 	{
 		title: "Endorsements",
 		description: "Description 1",
-		image: "",
+		image: "/img/endoresements-img.png",
 		clip: "",
 		gitHub: "https://github.com/cwatersaudio/endorsements-standalone.git",
 		liveSite: "https://cwendorsements.netlify.app/",
@@ -35,10 +35,10 @@ const projects = [
 	{
 		title: "Trivia App",
 		description: "Description 1",
-		image: "",
+		image: "/img/quizzical2.png",
 		clip: "",
 		gitHub: "https://github.com/cwatersaudio/quizzical-standalone",
-		liveSite: "",
+		liveSite: "https://cwquizapp.netlify.app/",
 	},
 ];
 
