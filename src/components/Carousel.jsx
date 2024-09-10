@@ -24,26 +24,34 @@ import projects from './WorkData'
 
 
 export function Carousel({ addDefaultImg }) {
-    // const { portfolioItemVisible, selectedProject } = React.useContext(PortfolioContext)
     const [emblaRef, emblaApi] = useEmblaCarousel(
         { loop: true },
         [Autoplay(),
         WheelGesturesPlugin()])
-    const [portfolioItemVisible, setPortfolioItemVisible] = React.useState(false)
-    const [selectedProject, setSelectedProject] = React.useState(projects[0])
+    const [selectedProject, setSelectedProject] = React.useState(null);
+    const portfolioItemRef = React.useRef(null);
+
+    const togglePortfolioModal = () => {
+        if (!portfolioItemRef.current) {
+            console.log("modal not there")
+            return
+        } else {
+            portfolioItemRef.current.hasAttribute('open') ?
+                portfolioItemRef.current.close() :
+                portfolioItemRef.current.showModal()
+
+        }
+    }
 
     const selectProject = (item) => {
         console.log(item)
         setSelectedProject(item);
-        setPortfolioItemVisible(true);
+        togglePortfolioModal()
     };
 
-    const handleModalClose = () => {
-        setPortfolioItemVisible(false);
-        setSelectedItem(null);
-    };
 
-    const workUI = projects.map((project, index) => {
+
+    const workCarousel = projects.map((project, index) => {
         return (
             <div className="embla__slide" key={project.title}>
                 <div className="portfolio__item">
@@ -55,7 +63,7 @@ export function Carousel({ addDefaultImg }) {
                     />
                     <p
                         className="portfolio__subtitle"
-                        onClick={() => handleItemClick(project)}
+                        onClick={() => selectProject(project)}
 
                     >
                         {project.title}
@@ -69,16 +77,25 @@ export function Carousel({ addDefaultImg }) {
             <div className="embla" ref={emblaRef}>
                 <div className="embla__container">
 
-                    {workUI}
+                    {workCarousel}
                 </div>
             </div>
 
-            {portfolioItemVisible && <PortfolioItem
+            {/* {portfolioItemVisible && <PortfolioItem
                 isOpen={portfolioItemVisible}
                 onClose={handleModalClose}
                 selectedItem={selectedProject}
 
-            />}
+            />} */}
+
+            <dialog ref={portfolioItemRef} className="portfolio__modal">
+                {selectedProject && <PortfolioItem
+                    selectedItem={selectedProject}
+                    onClose={togglePortfolioModal}
+                    noImg={addDefaultImg}
+                />
+                }
+            </dialog>
         </>
 
 
