@@ -538,10 +538,23 @@ header {
 }
 
 .modal__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 10px;
+}
+
+.app__preview {
+  height: 30rem;
+  margin-left: 2rem;
+  border: none;
+  zoom: .75;
+}
+
+.portfolio__modal--right {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  /* padding: 20px; */
+  justify-content: space-between;
 }
 
 .modal-close {
