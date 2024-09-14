@@ -81,12 +81,6 @@ export function Carousel({ addDefaultImg }) {
                 </div>
             </div>
 
-            {/* {PortfolioModalVisible && <PortfolioModal
-                isOpen={PortfolioModalVisible}
-                onClose={handleModalClose}
-                selectedItem={selectedProject}
-
-            />} */}
 
             <dialog ref={PortfolioModalRef} className="portfolio__modal">
                 {selectedProject && <PortfolioModal
